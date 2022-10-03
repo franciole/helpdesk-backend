@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\CURSOS\UDEMY\FORMAÇÃO_ANGULAR_SPRING_BOOT\workspace\helpdesk\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+169978388.index
+1574843208.index
