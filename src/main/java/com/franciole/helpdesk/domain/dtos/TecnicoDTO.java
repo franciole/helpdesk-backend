@@ -7,10 +7,12 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.franciole.helpdesk.domain.Tecnico;
 import com.franciole.helpdesk.domain.enums.Perfil;
+import org.hibernate.validator.constraints.br.CPF;
 
 public class TecnicoDTO implements Serializable {
 
@@ -20,6 +22,7 @@ public class TecnicoDTO implements Serializable {
 	@NotNull(message = "Campo Nome é requerido")
 	protected String nome;
 	@NotNull(message = "Campo CPF é requerido")
+	@CPF
 	protected String cpf;
 	@NotNull(message = "Campo EMAIL é requerido")
 	protected String email;

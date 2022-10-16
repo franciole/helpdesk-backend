@@ -11,6 +11,7 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.franciole.helpdesk.domain.Cliente;
 import com.franciole.helpdesk.domain.enums.Perfil;
+import org.hibernate.validator.constraints.br.CPF;
 
 public class ClienteDTO implements Serializable {
 
@@ -20,6 +21,7 @@ public class ClienteDTO implements Serializable {
 	@NotNull(message = "Campo Nome é requerido")
 	protected String nome;
 	@NotNull(message = "Campo CPF é requerido")
+	@CPF
 	protected String cpf;
 	@NotNull(message = "Campo EMAIL é requerido")
 	protected String email;
