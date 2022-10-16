@@ -1,7 +1,7 @@
 package com.franciole.helpdesk.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.franciole.helpdesk.domain.dtos.CredenciasDTO;
+import com.franciole.helpdesk.domain.dtos.CredenciaisDTO;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -31,8 +31,8 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response)
             throws AuthenticationException {
         try {
-            CredenciasDTO creds = new ObjectMapper().readValue(request.getInputStream(), CredenciasDTO.class);
-            UsernamePasswordAuthenticationToken authenticationToken =
+            CredenciaisDTO creds = new ObjectMapper().readValue(request.getInputStream(), CredenciaisDTO.class);
+                    UsernamePasswordAuthenticationToken authenticationToken =
                     new UsernamePasswordAuthenticationToken(creds.getEmail(), creds.getSenha(), new ArrayList<>());
             Authentication authentication = authenticationManager.authenticate(authenticationToken);
             return authentication;

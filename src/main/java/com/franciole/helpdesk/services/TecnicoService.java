@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 import com.franciole.helpdesk.domain.Pessoa;
 import com.franciole.helpdesk.domain.Tecnico;
 import com.franciole.helpdesk.domain.dtos.TecnicoDTO;
-import com.franciole.helpdesk.domain.repositories.PessoaRepository;
-import com.franciole.helpdesk.domain.repositories.TecnicoRepository;
+import com.franciole.helpdesk.repositories.PessoaRepository;
+import com.franciole.helpdesk.repositories.TecnicoRepository;
 import com.franciole.helpdesk.services.exceptions.ObjectNotFoundException;
 
 @Service
@@ -48,6 +48,9 @@ public class TecnicoService {
 	public Tecnico update(Integer id, @Valid TecnicoDTO objDTO) {
 		objDTO.setId(id);
 		Tecnico oldObj = findById(id);
+		if(!objDTO.getSenha().equals(oldObj.getSenha())){
+			objDTO.setSenha(encoder.encode(objDTO.getSenha()));
+		}
 		validaPorCpfEEmail(objDTO);
 		oldObj = new Tecnico(objDTO);
 		return repository.save(oldObj);

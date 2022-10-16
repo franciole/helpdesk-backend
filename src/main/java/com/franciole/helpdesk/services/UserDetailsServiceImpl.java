@@ -1,7 +1,7 @@
 package com.franciole.helpdesk.services;
 
 import com.franciole.helpdesk.domain.Pessoa;
-import com.franciole.helpdesk.domain.repositories.PessoaRepository;
+import com.franciole.helpdesk.repositories.PessoaRepository;
 import com.franciole.helpdesk.security.UserSS;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;

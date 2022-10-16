@@ -7,11 +7,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.franciole.helpdesk.domain.Tecnico;
 import com.franciole.helpdesk.domain.enums.Perfil;
+import com.franciole.helpdesk.domain.Tecnico;
 import org.hibernate.validator.constraints.br.CPF;
 
 public class TecnicoDTO implements Serializable {
@@ -29,6 +28,7 @@ public class TecnicoDTO implements Serializable {
 	@NotNull(message = "Campo SENHA é requerido")
 	protected String senha;
 	protected Set<Integer> perfis = new HashSet<>();
+
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	protected LocalDate dataCriacao = LocalDate.now();
 

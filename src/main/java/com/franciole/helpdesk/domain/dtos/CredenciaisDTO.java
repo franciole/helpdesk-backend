@@ -1,6 +1,6 @@
 package com.franciole.helpdesk.domain.dtos;
 
-public class CredenciasDTO {
+public class CredenciaisDTO {
 
     private String email;
     private String senha;

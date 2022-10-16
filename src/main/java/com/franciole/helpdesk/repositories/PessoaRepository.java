@@ -1,10 +1,9 @@
-package com.franciole.helpdesk.domain.repositories;
+package com.franciole.helpdesk.repositories;
 
 import java.util.Optional;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import com.franciole.helpdesk.domain.Pessoa;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Integer> {
 

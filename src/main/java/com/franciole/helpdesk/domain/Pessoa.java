@@ -16,10 +16,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import com.franciole.helpdesk.domain.enums.Perfil;
 import org.hibernate.validator.constraints.br.CPF;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.franciole.helpdesk.domain.enums.Perfil;
 
 @Entity
 public abstract class Pessoa implements Serializable {

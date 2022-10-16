@@ -15,7 +15,7 @@ import com.franciole.helpdesk.domain.Tecnico;
 import com.franciole.helpdesk.domain.dtos.ChamadoDTO;
 import com.franciole.helpdesk.domain.enums.Prioridade;
 import com.franciole.helpdesk.domain.enums.Status;
-import com.franciole.helpdesk.domain.repositories.ChamadoRepository;
+import com.franciole.helpdesk.repositories.ChamadoRepository;
 import com.franciole.helpdesk.services.exceptions.ObjectNotFoundException;
 
 @Service

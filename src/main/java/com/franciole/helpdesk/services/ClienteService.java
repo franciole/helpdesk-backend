@@ -13,8 +13,8 @@ import org.springframework.stereotype.Service;
 import com.franciole.helpdesk.domain.Cliente;
 import com.franciole.helpdesk.domain.Pessoa;
 import com.franciole.helpdesk.domain.dtos.ClienteDTO;
-import com.franciole.helpdesk.domain.repositories.ClienteRepository;
-import com.franciole.helpdesk.domain.repositories.PessoaRepository;
+import com.franciole.helpdesk.repositories.ClienteRepository;
+import com.franciole.helpdesk.repositories.PessoaRepository;
 import com.franciole.helpdesk.services.exceptions.ObjectNotFoundException;
 
 @Service
